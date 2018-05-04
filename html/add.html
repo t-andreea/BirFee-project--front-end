@@ -1,9 +1,10 @@
 <html>
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="../css/add.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="../js/add.js"></script>
   <title>Add Page</title>
 </head>
 <body>
@@ -13,11 +14,11 @@
     <h1 class="title">ADD</h1>
     <form class="add-form" action="http://localhost:5000/add" method="post">
 <p class="form" id="number1">First number</p>
-<input class="form-input" type="number" id="nr1">
+<input class="form-input" type="text "id="nr1">
 <p class="form" id="number2">Second number</p>
-<input class="form-input" type="number" id="nr2">
+<input class="form-input" type="text" id="nr2">
 <br>
-<input class="submit" type="submit" value="Submit">
+<button class="submit" onclick="sendRequest()">Submit</button>
     </form>
   </div>
 </div>

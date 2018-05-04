@@ -7,7 +7,7 @@ function set_error(message){
 function sendRequest() {
   var nr1 = document.getElementById("nr1").value;
   var nr2 = document.getElementById("nr2").value;
-}
+
 
 if (nr1 == "" || nr2 == "") {
     set_error("No number added!");
@@ -32,3 +32,4 @@ http.onreadystatechange = function() {
 }
 
 http.send(params);
+}
