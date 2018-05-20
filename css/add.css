@@ -1,5 +1,5 @@
 body {
-  background: url('stars.jpg');
+  background: url('../images/stars.jpg');
   background-size: cover;
 }
 
@@ -16,7 +16,7 @@ body {
   width: 250px;
   height: 350px;
   position: absolute;
-  background: url('veronica.gif');
+  background: url('../images/veronica.gif');
 }
 
 .right {

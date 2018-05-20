@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Decrease Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/decrease.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="../js/decrease.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="form-box">
+        <img src="../images/avatar.png" class="avatar">
+        <h1 class="title">Decrease</h1>
+        <div class="form">
+          <form action="http://localhost:5000/decrease" method="post">
+            <p id="number1">First number</p>
+            <input type="text" id="no1">
+            <p id="number2">Second number</p>
+            <input type="text" id="no2">
+            <br>
+            <button type="submit" onclick="sendRequest()">Submit</button>
+          </form>
+        </div>
+        <div class="bottom">
+          <p>Another operation?</p>
+          <ul>
+          <li><a href="http://localhost:5000/add">add</a></ls>
+          <li><a href="http://localhost:5000/division">division</a></ls>
+          <li><a href="http://localhost:5000/product">product</a></ls>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
