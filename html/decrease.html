@@ -5,7 +5,7 @@
     <title>Decrease Page</title>
     <link rel="stylesheet" type="text/css" href="../css/decrease.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="../js/decrease.js"></script>
+    
   </head>
   <body>
     <div class="background">
@@ -13,21 +13,21 @@
         <img src="../images/avatar.png" class="avatar">
         <h1 class="title">Decrease</h1>
         <div class="form">
-          <form action="http://localhost:5000/decrease" method="post">
+          <div class="form-d">
             <p id="number1">First number</p>
             <input type="text" id="no1">
             <p id="number2">Second number</p>
             <input type="text" id="no2">
             <br>
-            <button type="submit" onclick="sendRequest()">Submit</button>
-          </form>
+            <button onclick="sendRequest()">Submit</button>
+          </div>
         </div>
         <div class="bottom">
           <p>Another operation?</p>
           <ul>
-          <li><a href="http://localhost:5000/add">add</a></ls>
-          <li><a href="http://localhost:5000/division">division</a></ls>
-          <li><a href="http://localhost:5000/product">product</a></ls>
+          <li><a href="add.html">add</a></ls>
+          <li><a href="division.html">division</a></ls>
+          <li><a href="product.html">product</a></ls>
         </ul>
         </div>
       </div>
