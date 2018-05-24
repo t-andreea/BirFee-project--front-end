@@ -1,14 +1,16 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Turning on/off the relay</title>
     <link rel="stylesheet" href="../css/relay.css">
-    <script type="text/javascript" href="../js/relay.js" ></script>
+    <script src="../js/relay.js" ></script>
   </head>
-  <body>
+  <body onLoad="init(),updateLabel()" >
 <div class="relay">
-  <button onclick="sendRequest()" >Click me</button>
+  <button onClick="sendRequest()" >Click me</button>
+</div>
+<div class="humidity">
+  <h1 id="temp-hum"></h1>
 </div>
   </body>
 </html>
