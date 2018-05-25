@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  background: url('../images/relayw.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.humidity {
+  width: 400px;
+  height: 200px;
+  margin: 40px 0 0 40px;
+  border-radius: 30px;
+  background: #000;
+  opacity: 0.85;
+  color: #FFF;
+}
+
+.relay {
+  position: absolute;
+  bottom: 150px;
+  left: calc(50% - 80px);
+}
+
+button {
+  background-color: #000;
+  border: none;
+  color: #FFF;
+  padding: 16px 32px;
+  font-size: 16px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button:focus {
+  outline: none;
+}
