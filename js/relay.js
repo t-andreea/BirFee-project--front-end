@@ -40,7 +40,7 @@ function updateLabel() {
   http.onreadystatechange = function() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
-	 document.getElementById("temp-hum").innerHTML = "Humidity: " + a.content.humidity + "  Temperature: " + a.content.temperature;
+	 document.getElementById("temp-hum").innerHTML = "Humidity: " + a.content.humidity + "<br/>  Temperature: " + a.content.temperature;
      }
   }
 

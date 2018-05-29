@@ -2,8 +2,7 @@ body {
   margin: 0;
   background: url('../images/relayw.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: auto;
 }
 
 .humidity {
@@ -14,6 +13,17 @@ body {
   background: #000;
   opacity: 0.85;
   color: #FFF;
+}
+
+h1 {
+  margin-top: 80px;
+  font-size: 30px;
+}
+
+.humi {
+  top: 20px;
+  position: absolute;
+  left: calc(50% - 90px);
 }
 
 .relay {
