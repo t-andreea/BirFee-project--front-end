@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../css/relay.css">
     <script src="../js/relay.js" ></script>
   </head>
-    <body onLoad="init(),updateLabel()" >
+    <body <!--onLoad="init(),updateLabel()"--> >
       <center>
       <div class="humidity">
 	<center class="humi">
@@ -14,7 +14,7 @@
       </div>
 	</center>
       <div class="relay">
-        <button onClick="sendRequest()">Turn ON/OFF</button>
+        <button id="food" onClick="sendRequest(),setColor()">Turn ON</button>
       </div>
     </body>
 </html>
