@@ -99,13 +99,13 @@ button:hover {
   color: #FFF;
   font-size: 32px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .temperature, .humidity {
   font-family: "Poiret One", sans-serif;
   color: #FFF;
   font-size: 20px;
- 
+  text-align: center;
   padding: 3px 0;
-  margin-left: 40px;
 }
