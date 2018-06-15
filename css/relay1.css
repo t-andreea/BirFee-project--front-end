@@ -11,7 +11,7 @@ body {
   border: 1px solid red;
   float: left;
   width: 49%;
-  height: 600px;
+  height: 100%;
 }
 
 .top-left {
@@ -25,15 +25,15 @@ body {
   height: 80px;
   background: #FFF;
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 90px;
 }
-
+/*
 .bottom-left {
   border: 1px solid green;
   width: 100%;
   height: 50%
 }
-
+*/
 .details {
   width: 350px;
   height: 150px;
@@ -42,13 +42,16 @@ body {
   margin-left: 50px;
   padding: 20px 10px;
   border-radius: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }
 
 .right {
   border: 1px solid blue;
   float: right;
   width: 50%;
-  height: 600px;
+  height: 100%;
 }
 
 .features {
@@ -98,19 +101,21 @@ button:hover {
   font-family: "Poiret One", sans-serif;
   color: #FFF;
   font-size: 28px;
-  margin-left: 35px;
+  text-align: center;
 }
 
 .time {
   font-family: "Poiret One", sans-serif;
   color: #FFF;
   font-size: 32px;
-  margin: 3px 0 0 105px;
+  text-align: center;
 }
 
 .temperature, .humidity {
   font-family: "Poiret One", sans-serif;
   color: #FFF;
-  margin:50px;
   font-size: 20px;
+ 
+  padding: 3px 0;
+  margin-left: 40px;
 }
