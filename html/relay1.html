@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Poiret+One" rel="stylesheet">
     <script src="../js/relay1.js"></script>
   </head>
-  <body onLoad="waterInit(), foodInit(), updateLabel(), renderTime()">
+  <body onLoad="waterInit(), foodInit(), buzzerInit(), updateLabel(), renderTime()">
     <div class="left">
       <img src="../images/logo.png">
       <div class="details">
@@ -29,7 +29,7 @@
           <button onClick="sendWaterRequest()" id="button2">WATER</button>
         </div>
         <div class="f-button">
-          <button id="button3">PLAY MUSIC</button>
+          <button onClick="sendMusicRequest()" id="button3">PLAY MUSIC</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
-var button_value = "";
+var button_value_w = "";
+var button_value_f = "";
+var button_value_m = "";
 var connection = "http://localhost:5000";
 
 
@@ -14,13 +16,13 @@ function waterInit() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
          if(a.status == 0) {
-   	    button_value = a.content;
+   	    button_value_w = a.content;
          }
-	 if(button_value == "off") {
-	    button_value = "on";
+	 if(button_value_w == "off") {
+	    button_value_w = "on";
          }
          else {
-            button_value = "off";
+            button_value_w = "off";
          }
      }
   }
@@ -41,13 +43,13 @@ function foodInit() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
          if(a.status == 0) {
-   	    button_value = a.content;
+   	    button_value_f = a.content;
          }
-	 if(button_value == "off") {
-	    button_value = "on";
+	 if(button_value_f == "off") {
+	    button_value_f = "on";
          }
          else {
-            button_value = "off";
+            button_value_f = "off";
          }
      }
   }
@@ -68,13 +70,13 @@ function buzzerInit() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
          if(a.status == 0) {
-   	    button_value = a.content;
+   	    button_value_m = a.content;
          }
-	 if(button_value == "start") {
-	    button_value = "stop";
+	 if(button_value_m == "off") {
+	    button_value_m = "on";
          }
          else {
-            button_value = "start";
+            button_value_m = "off";
          }
      }
   }
@@ -147,7 +149,7 @@ function sendWaterRequest() {
 
   var http = new XMLHttpRequest();
   var url = connection + "/water";
-  var params = "action=" + button_value;
+  var params = "action=" + button_value_w;
   http.open("POST", url, true);
 
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -156,11 +158,11 @@ function sendWaterRequest() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
          if(a.status == 0) {
-   	    if(button_value == "off") {
-	       button_value = "on";
+   	    if(button_value_w == "off") {
+	       button_value_w = "on";
             }
 	    else {
-   	       button_value = "off";
+   	       button_value_w = "off";
 	    }
 	 }
      }
@@ -174,7 +176,7 @@ function sendFoodRequest() {
 
   var http = new XMLHttpRequest();
   var url = connection + "/food";
-  var params = "action=" + button_value;
+  var params = "action=" + button_value_f;
   http.open("POST", url, true);
 
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -183,11 +185,38 @@ function sendFoodRequest() {
      if(http.readyState == 4 && http.status == 200) {
          var a = JSON.parse(http.responseText);
          if(a.status == 0) {
-   	    if(button_value == "off") {
-	       button_value = "on";
+   	    if(button_value_f == "off") {
+	       button_value_f = "on";
             }
 	    else {
-   	       button_value = "off";
+   	       button_value_f = "off";
+	    }
+	 }
+     }
+  }
+
+  http.send(params);
+}
+
+
+function sendMusicRequest() {
+
+  var http = new XMLHttpRequest();
+  var url = connection + "/buzzer";
+  var params = "action=" + button_value_m;
+  http.open("POST", url, true);
+
+  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  http.onreadystatechange = function() {
+     if(http.readyState == 4 && http.status == 200) {
+         var a = JSON.parse(http.responseText);
+         if(a.status == 0) {
+   	    if(button_value_m == "off") {
+	       button_value_m = "on";
+            }
+	    else {
+   	       button_value_m = "off";
 	    }
 	 }
      }
