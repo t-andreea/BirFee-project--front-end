@@ -142,6 +142,8 @@ function updateLabel() {
   }
 
   http.send();
+
+  setTimeout("updateLabel()", 100000);
 }
 
 
