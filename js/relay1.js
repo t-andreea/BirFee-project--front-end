@@ -1,4 +1,4 @@
-var button_value_w = "";
+﻿var button_value_w = "";
 var button_value_f = "";
 var button_value_m = "";
 var connection = "http://localhost:5000";
@@ -225,4 +225,67 @@ function sendMusicRequest() {
   }
 
   http.send(params);
+}
+
+
+function timeTransform() {
+
+  var time = document.getElementById("time-picker").value;
+
+  if( !time ) {
+    alert("Please choose the hour!");
+  }
+  else {
+    var newTime = "";
+    for(i = 0; i < time.length - 3; i++)
+        newTime = newTime + time[i];
+    return newTime;
+  }
+}
+
+
+function sendTimeRequest() {
+
+  var http = new XMLHttpRequest();
+  var url = connection + "/timer";
+  var myTime = timeTransform();
+  var params = "time=" + myTime;
+  http.open("POST", url, true);
+
+  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  http.onreadystatechange = function() {
+     if(http.readyState == 4 && http.status == 200) {
+         var a = JSON.parse(http.responseText);
+         if(a.status == 0) {
+   	        console.log("Time was set at " + myTime);
+	       }
+         else {
+           alert("Something went wrong, please try again!");
+           console.log("Something went wrong");
+         }
+     }
+  }
+
+  http.send(params);
+  document.getElementById("hour").innerHTML = myTime;
+}
+
+
+function updateAlarm() {
+
+  var http = new XMLHttpRequest();
+  var url = connection + "/timer";
+  http.open("GET", url, true);
+
+  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  http.onreadystatechange = function() {
+     if(http.readyState == 4 && http.status == 200) {
+         var a = JSON.parse(http.responseText);
+	       document.getElementById("hour").innerHTML = a.content;
+    }
+  }
+
+  http.send();
 }

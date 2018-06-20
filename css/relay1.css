@@ -8,20 +8,19 @@ body {
 }
 
 .left {
-  border: 1px solid red;
   float: left;
   width: 49%;
   height: 100%;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-top: 50px;
   margin-left: 100px;
   padding: 5px;
   background: rgba(0,0,0,0.9);
-  border-radius: 60px;
+  border-radius: 75px;
 }
 
 .details {
@@ -38,7 +37,6 @@ img {
 }
 
 .right {
-  border: 1px solid blue;
   float: right;
   width: 50%;
   height: 100%;
@@ -53,12 +51,51 @@ img {
   border-radius: 20px;
 }
 
-.clock {
-  height: 190px;
-  border: 1px solid red;
+input {
+  text-align: center;
 }
 
-button {
+.clock {
+  height: 180px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.fixed-hour {
+  font-size: 30px;
+  font-family: "Poiret One", sans-serif;
+  color: #FFF;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.hour {
+  font-size: 25px;
+  font-family: "Poiret One", sans-serif;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+#time-button {
+  width: 70px;
+  height: 30px;
+  color: #FFF;
+  border: none;
+  text-decoration: none;
+  font-family: "Poiret One", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  background: #CD5C5C;
+  opacity: 0.9;
+}
+
+#time-button:hover {
+  opacity: 1;
+}
+
+.f-button button {
   width: 250px;
   height: 40px;
   margin: 8px 0 8px 50px;
@@ -99,6 +136,7 @@ button:hover {
   color: #FFF;
   font-size: 32px;
   text-align: center;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
