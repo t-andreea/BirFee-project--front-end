@@ -22,13 +22,13 @@
     </script>
     <script src="../js/relay1.js"></script>
   </head>
-  <body onLoad="waterInit(), foodInit(), buzzerInit(), updateLabel(), renderTime()">
+  <body onLoad="waterInit(), foodInit(), buzzerInit(), updateLabel(), renderTime(), updateAlarm()">
     <div class="left">
       <img src="../images/logo.png">
       <div class="details">
         <div class="date" id="date"></div>
         <div class="time" id="time"></div>
-        <div class="temperature" id="temp"></div>
+        <div class="temperature" id="temp">It´s not updated yet...</div>
         <div class="humidity" id="hum"></div>
       </div>
     </div>
@@ -36,7 +36,7 @@
       <div class="features">
         <div class="clock">
           <div class="fixed-hour">Start at:</div>
-          <div  onLoad="updateAlarm()" id="hour" class="hour">10:34</div>
+          <div id="hour" class="hour">Updating...</div>
           <div id="datetimepicker3" class="input-append"><
             <input id="time-picker"data-format="hh:mm:ss" type="text"></input>
             <span class="add-on">

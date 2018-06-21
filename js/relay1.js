@@ -288,4 +288,5 @@ function updateAlarm() {
   }
 
   http.send();
+  setTimeout("updateAlarm()", 100000);
 }
